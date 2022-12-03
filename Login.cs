@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Alpha_Foodie_POS
 {
@@ -29,6 +30,12 @@ namespace Alpha_Foodie_POS
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
+
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data SOurce=db_users.mdb");
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbDataAdapter da = new OleDbDataAdapter();
+
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -81,6 +88,24 @@ namespace Alpha_Foodie_POS
 
         private void button1_Click(object sender, EventArgs e)
         {
+            con.Open();
+            string login="SELECT * FROM tbl_users WHERE username='"+name.Text+"' and password='"+password.Text+"'";
+            cmd = new OleDbCommand(login, con);
+            OleDbDataReader dr=cmd.ExecuteReader();
+
+
+            if (dr.Read() == true)
+            {
+                new Dashboard().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                name.Text = "";
+                password.Text = "";
+                name.Focus();
+            }
 
         }
 

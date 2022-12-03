@@ -31,13 +31,13 @@ namespace Alpha_Foodie_POS
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
-
-            OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data SOurce=db_users.mdb");
-            OleDbCommand cmd = new OleDbCommand();
-            OleDbDataAdapter da = new OleDbDataAdapter();
-
         }
+
+
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data SOurce=db_users.mdb");
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbDataAdapter da = new OleDbDataAdapter();
+
 
         private void register_form_Load(object sender, EventArgs e)
         {
@@ -70,8 +70,32 @@ namespace Alpha_Foodie_POS
         {
             if(name.Text=="" && password.Text == "" && confirmpswd.Text=="")
             {
+                MessageBox.Show("Username and Password field are empty", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+            else if(password.Text==confirmpswd.Text)
+            {
+                con.Open();
+                string register= "INSERT INTO tbl_users VALUES('"+name.Text+ "','" + password.Text + "')";
+                cmd = new OleDbCommand(register, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                name.Text = "";
+                password.Text = "";
+                confirmpswd.Text = "";
+
+                MessageBox.Show("Your Account has been Successfully Created", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Password doesnot match, Please Re-Enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                password.Text = "";
+                confirmpswd.Text = "";
+                password.Focus();
+            }
+
+
         }
     }
 }
