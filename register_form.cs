@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;          //Library
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using System.Data.OleDb;
 
 namespace Alpha_Foodie_POS
 {
@@ -30,6 +31,12 @@ namespace Alpha_Foodie_POS
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
+
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data SOurce=db_users.mdb");
+            OleDbCommand cmd = new OleDbCommand();
+            OleDbDataAdapter da = new OleDbDataAdapter();
+
         }
 
         private void register_form_Load(object sender, EventArgs e)
@@ -55,6 +62,14 @@ namespace Alpha_Foodie_POS
             {
                 password.PasswordChar = '●';
                 confirmpswd.PasswordChar = '●';
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(name.Text=="" && password.Text == "" && confirmpswd.Text=="")
+            {
 
             }
         }
