@@ -1,10 +1,11 @@
 # Foodie_Alpha_Mart
 This is my Semester project
-![image](https://user-images.githubusercontent.com/114800813/205348249-67f6d96f-c0f0-43c7-8aa9-bcddcd8c8ced.png)
-![image](https://user-images.githubusercontent.com/114800813/205348306-79f63a8b-124f-4608-b999-a1655991f85a.png)
-![image](https://user-images.githubusercontent.com/114800813/205348528-3a0f6803-aa13-4ef3-b5f6-5b3eeb8e3972.png)
-![image](https://user-images.githubusercontent.com/114800813/205452743-44c974e7-02e4-423d-b679-4a1ad28aceb9.png)
-![WhatsApp Image 2022-12-03 at 9 54 15 PM](https://user-images.githubusercontent.com/114800813/205452767-e62614cd-7614-4c94-bcc9-4ad391ba5f15.jpeg)
-
+![image](https://user-images.githubusercontent.com/114800813/216830582-7721348e-0f6e-4e09-9f3a-c0ba19eedc2b.png)
+![image](https://user-images.githubusercontent.com/114800813/216830588-67b9b23c-d32a-451b-a2b9-c03d4ac3f4ad.png)
+![image](https://user-images.githubusercontent.com/114800813/216830604-7e493566-02fc-4c85-bdce-86707cd889cc.png)
+![image](https://user-images.githubusercontent.com/114800813/216830634-27f50ae3-b750-4741-8aff-46aa3b76b02b.png)
+![image](https://user-images.githubusercontent.com/114800813/216830646-a10c7cbc-8351-4238-ae83-1debc2d9c362.png)
+![image](https://user-images.githubusercontent.com/114800813/216830627-b5271c46-31bf-4b06-be0d-bd04b819eaae.png)
+![Uploading image.png…]()
 
 
