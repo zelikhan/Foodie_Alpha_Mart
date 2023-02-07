@@ -1,4 +1,3 @@
-# Foodie_Alpha_Mart 
 ![image](https://user-images.githubusercontent.com/114800813/216830582-7721348e-0f6e-4e09-9f3a-c0ba19eedc2b.png)
 ![image](https://user-images.githubusercontent.com/114800813/216830588-67b9b23c-d32a-451b-a2b9-c03d4ac3f4ad.png)
 ![image](https://user-images.githubusercontent.com/114800813/216830604-7e493566-02fc-4c85-bdce-86707cd889cc.png)
